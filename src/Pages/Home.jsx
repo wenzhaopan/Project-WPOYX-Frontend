@@ -14,7 +14,7 @@ const Home = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/postings"); // Fetch posts from the server
+        const response = await fetch("https://api.listing.pw/api/postings"); // Fetch posts from the server
         const posts = await response.json(); // Parse the response as JSON
         setPosts(posts); // Update the posts state with the fetched data
       } catch (e) {
@@ -115,7 +115,7 @@ const Home = () => {
     event.stopPropagation(); // Stop the event from propagating to parent elements
 
     try {
-      await fetch(`http://localhost:5000/api/postings/${postId}`, {
+      await fetch(`https://api.listing.pw/api/postings/${postId}`, {
         method: "DELETE", // HTTP DELETE request to delete the specified post
       });
 
