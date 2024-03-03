@@ -27,7 +27,7 @@ function ImageForm() {
 
   const handleAddPostHelper = async (title, content, picture) => {
     try {
-      const response = await fetch('http://localhost:5000/api/postings', {
+      const response = await fetch('https://api.listing.pw/api/postings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
