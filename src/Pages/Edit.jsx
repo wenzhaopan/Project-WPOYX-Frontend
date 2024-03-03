@@ -34,13 +34,13 @@ function EditPage() {
   const handleAddPostHelper = async (title, content, picture) => {
     try {
       // Delete the note with the current ID
-      await fetch(`http://localhost:5000/api/postings/${location.state.post.id}`, {
+      await fetch(`https://api.listing.pw/api/postings/${location.state.post.id}`, {
         method: 'DELETE',
       });
       console.log('Note deleted successfully');
       
       // Add the new post
-      const response = await fetch('http://localhost:5000/api/postings', {
+      const response = await fetch('https://api.listing.pw/api/postings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
